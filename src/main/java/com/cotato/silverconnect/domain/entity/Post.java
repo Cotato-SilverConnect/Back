@@ -25,6 +25,7 @@ public class Post {
     private String category;
     private String title;
     private String content;
+
     @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm", timezone="Asia/Seoul")
     @CreationTimestamp
     private LocalDateTime createdAt;
