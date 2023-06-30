@@ -19,8 +19,8 @@ public class User {
     private Long id;
     private Long age;
     private String username;
-    private long likeCount;
-    private long mvpCount;
+    private Long likeCount;
+    private Long mvpCount;
 
     @Builder
     public User(String username, long likeCount, long mvpCount,Long age) {

@@ -31,11 +31,11 @@ public class Post {
 
     private String place;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gu_id")
     private Gu gu;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dong_id")
     private Dong dong;
 
