@@ -17,15 +17,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long id;
-
+    private Long age;
     private String username;
-    private long like_num;
-    private long mvp_num;
+    private long likeCount;
+    private long mvpCount;
 
     @Builder
-    public User(String username, long like_num, long mvp_num) {
+    public User(String username, long likeCount, long mvpCount,Long age) {
         this.username = username;
-        this.like_num = like_num;
-        this.mvp_num = mvp_num;
+        this.likeCount = likeCount;
+        this.mvpCount = mvpCount;
+        this.age = age;
     }
 }
