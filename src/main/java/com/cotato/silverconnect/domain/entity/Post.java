@@ -39,8 +39,12 @@ public class Post {
     @JoinColumn(name = "dong_id")
     private Dong dong;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     @Builder
-    public Post(String title, String content, LocalDateTime createdAt, LocalDateTime eventDate, String place, Gu gu, Dong dong) {
+    public Post(String title, String content, LocalDateTime createdAt, LocalDateTime eventDate, String place, Gu gu, Dong dong,User user) {
         this.title = title;
         this.content = content;
         this.createdAt = createdAt;
@@ -48,5 +52,6 @@ public class Post {
         this.place = place;
         this.gu = gu;
         this.dong = dong;
+        this.user = user;
     }
 }
