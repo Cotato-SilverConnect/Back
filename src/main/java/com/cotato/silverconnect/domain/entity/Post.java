@@ -22,6 +22,7 @@ public class Post {
     @Column(name = "post_id")
     private Long id;
 
+    private String category;
     private String title;
     private String content;
 
@@ -31,7 +32,7 @@ public class Post {
     private LocalDateTime eventDate;
 
     private String place;
-
+    private Long limitParticipantNum;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gu_id")
     private Gu gu;
@@ -45,7 +46,8 @@ public class Post {
     private User user;
 
     @Builder
-    public Post(String title, String content, LocalDateTime createdAt, LocalDateTime eventDate, String place, Gu gu, Dong dong,User user) {
+    public Post(String category, String title, String content, LocalDateTime createdAt, LocalDateTime eventDate, String place, Gu gu, Dong dong,User user) {
+        this.category = category;
         this.title = title;
         this.content = content;
         this.createdAt = createdAt;
