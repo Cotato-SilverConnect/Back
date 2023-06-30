@@ -22,6 +22,7 @@ public class Post {
     @Column(name = "post_id")
     private Long id;
 
+    private String category;
     private String title;
     private String content;
     @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm", timezone="Asia/Seoul")
@@ -44,7 +45,8 @@ public class Post {
     private User user;
 
     @Builder
-    public Post(String title, String content, LocalDateTime createdAt, LocalDateTime eventDate, String place, Gu gu, Dong dong,User user) {
+    public Post(String category, String title, String content, LocalDateTime createdAt, LocalDateTime eventDate, String place, Gu gu, Dong dong,User user) {
+        this.category = category;
         this.title = title;
         this.content = content;
         this.createdAt = createdAt;
