@@ -17,6 +17,7 @@ public class PostResponseDto {
     String title;
     String content;
     String username;
+    String category;
     LocalDateTime createdAt;
     LocalDateTime eventDate;
     String dongName;
@@ -31,6 +32,7 @@ public class PostResponseDto {
                 .title(post.getTitle())
                 .content(post.getContent())
                 .username(post.getUser().getUsername())
+                .category(post.getCategory())
                 .createdAt(post.getCreatedAt())
                 .eventDate(post.getEventDate())
                 .dongName(dongName)
