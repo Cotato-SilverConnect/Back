@@ -30,7 +30,7 @@ public class Post {
     private LocalDateTime eventDate;
 
     private String place;
-
+    private Long limitParticipantNum;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gu_id")
     private Gu gu;
